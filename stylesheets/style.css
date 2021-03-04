@@ -1,0 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
+body {
+    margin: 0;
+    font: 100% normal "PT Sans", sans-serif;
+    background-color: #FCFCFC;
+}
