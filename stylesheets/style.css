@@ -1,6 +1,56 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
+
 body {
     margin: 0;
     font: 100% normal "PT Sans", sans-serif;
     background-color: #FCFCFC;
+}
+
+header {
+    display: flex;
+    width: 65%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.photo_container {
+    width: 10rem;
+}
+
+#self_photo {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#linkedin_logo {
+    height: 2rem;
+    margin: 1.5rem 0 0 0;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+#name {
+    padding: 10px;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h2 {
+    color: rgb(58, 58, 58);
 }
