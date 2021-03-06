@@ -8,8 +8,8 @@ body {
 
 header {
     display: flex;
-    width: 65%;
-    justify-content: space-evenly;
+    width: 50%;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -20,8 +20,14 @@ header {
     margin: 1.5rem 0;
 }
 
+.left-start {
+    justify-content: flex-start;
+    width: 50%;
+    margin: 3rem 0 1rem 25%;
+}
+
 .photo_container {
-    width: 10rem;
+    width: 9em;
 }
 
 #self_photo {
@@ -35,20 +41,33 @@ header {
     margin: 1.5rem 0 0 0;
 }
 
-h1 {
+h1.english--name {
     margin-top: 0;
 }
 
-h2 {
+h2.chinese--name {
     margin: 0;
 }
 
 #name {
     padding: 10px;
     display: flex;
-    width: 50%;
+    width: 26%;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+#intro {
+    margin-top: 3rem;
+}
+
+#intro p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#intro #place {
+    margin-top: 2rem;
 }
 
 h2 {
