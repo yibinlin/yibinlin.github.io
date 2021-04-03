@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font: 100% normal "PT Sans", sans-serif;
@@ -7,31 +11,25 @@ body {
 }
 
 header {
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "photo name"
+                         "intro intro";
+    justify-items: center;
     align-items: center;
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1.5rem 0;
-}
-
-.left-start {
-    justify-content: flex-start;
-    width: 50%;
-    margin: 3rem 0 1rem 25%;
+    margin: 4rem 2rem;
 }
 
 .photo_container {
-    width: 9em;
+    grid-area: photo;
+    margin: 0 0.6rem;
 }
 
 #self_photo {
-    display: flex;
     max-width: 100%;
     max-height: 100%;
 }
@@ -50,15 +48,16 @@ h2.chinese--name {
 }
 
 #name {
-    padding: 10px;
+    grid-area: name;
+    margin-left: 0.6rem;
     display: flex;
-    width: 26%;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 #intro {
     margin-top: 3rem;
+    grid-area: intro;
 }
 
 #intro p {
@@ -67,9 +66,59 @@ h2.chinese--name {
 }
 
 #intro #place {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 h2 {
     color: rgb(58, 58, 58);
+}
+
+.left-start {
+    width: 75%;
+    margin: 3rem 0 1rem 12.5%;
+}
+
+@media (min-width: 1000px) {
+    .wrapper {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    header {
+        display: flex;
+        width: 50%;
+        min-width: 25rem;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    #name {
+        width: 26%;
+    }
+
+    .photo_container {
+        width: 7rem;
+        min-width: 6.5rem;
+    }
+
+    #self_photo {
+        display: flex;
+    }
+
+    #intro {
+        margin-left: 1rem;
+        padding: 0.7rem;
+    }
+
+    .left-start {
+        justify-content: flex-start;
+        width: 50%;
+        margin: 3rem 0 1rem 25%;
+    }
+
+    #intro #place {
+        margin-top: 2rem;
+    }
 }
