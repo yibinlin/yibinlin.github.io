@@ -78,7 +78,17 @@ h2 {
     margin: 3rem 0 1rem 12.5%;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 700px) {
+    header {
+        grid-template-areas: "photo name"
+                             "intro none";
+    }
+    #name {
+        justify-self: start;
+    }
+}
+
+@media (min-width: 1072px) {
     .wrapper {
         margin: 2rem 0;
         display: flex;
@@ -96,6 +106,7 @@ h2 {
 
     #name {
         width: 26%;
+        min-width: 9rem;
     }
 
     .photo_container {
