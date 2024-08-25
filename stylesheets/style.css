@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic);
+@import url('https://fonts.googleapis.com/css?family=San+Francisco:400,400italic');
 
 * {
     box-sizing: border-box;
@@ -6,131 +6,117 @@
 
 body {
     margin: 0;
-    font: 100% normal "PT Sans", sans-serif;
-    background-color: #FCFCFC;
-}
-
-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: "photo name"
-                         "intro intro";
-    justify-items: center;
-    align-items: center;
+    font-family: "San Francisco", "Helvetica Neue", Arial, sans-serif;
+    background-color: #F5F5F7;
+    color: #333333;
+    line-height: 1.6;
 }
 
 .wrapper {
     margin: 4rem 2rem;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 .photo_container {
-    grid-area: photo;
-    margin: 0 0.6rem;
+    /*margin-bottom: 1.5rem; */
+    border-radius: 5%;
+    margin-top: 2rem;
+    max-width: 150px;
+    overflow: hidden;
 }
 
 #self_photo {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: auto;
+}
+
+#name {
+    margin-bottom: 2rem;
+}
+
+h1.english--name {
+    margin: 0 0 1.5rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1D1D1F;
+}
+
+h2.chinese--name {
+    margin: 0 0 0 0;
+    font-size: 1.4rem;
+    color: #1D1D1F;
 }
 
 #linkedin_logo {
     height: 2rem;
-    margin: 1.5rem 0 0 0;
+    margin-top: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-h1.english--name {
-    margin-top: 0;
-}
-
-h2.chinese--name {
-    margin: 0;
-}
-
-#name {
-    grid-area: name;
-    margin-left: 0.6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+#linkedin_logo:hover {
+    opacity: 1;
 }
 
 #intro {
-    margin-top: 3rem;
-    grid-area: intro;
+    color: #6e6e73;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 #intro p {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 #intro #place {
     margin-top: 1rem;
 }
 
-h2 {
-    color: rgb(58, 58, 58);
-}
-
 .left-start {
-    width: 75%;
-    margin: 3rem 0 1rem 12.5%;
+    margin: 0 auto;
+    /* width: 75%; */
+    max-width: 1024;
+    /* padding: 1rem; */
+    text-align: center;
 }
 
+/* Responsive Design */
 @media (min-width: 700px) {
     header {
-        grid-template-areas: "photo name"
-                             "intro none";
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
     }
+
+    .photo_container {
+        margin-bottom: 0;
+        /* margin-right: 2rem; */
+    }
+
     #name {
-        justify-self: start;
+        margin-bottom: 0;
+    }
+
+    #intro {
+        text-align: left;
     }
 }
 
 @media (min-width: 1072px) {
     .wrapper {
-        margin: 2rem 0;
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-
-    header {
-        display: flex;
-        width: 50%;
-        min-width: 25rem;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    #name {
-        width: 26%;
-        min-width: 9rem;
-    }
-
-    .photo_container {
-        width: 7rem;
-        min-width: 6.5rem;
-    }
-
-    #self_photo {
-        display: flex;
-    }
-
-    #intro {
-        margin-left: 1rem;
-        padding: 0.7rem;
+        margin: 4rem auto;
+        max-width: 1024px;
     }
 
     .left-start {
-        justify-content: flex-start;
-        width: 50%;
-        margin: 2.5rem 0 1rem 25%;
-        padding: 0 0 0 1rem;
-    }
-
-    #intro #place {
-        margin-top: 2rem;
+        text-align: left;
+        /* padding: 0 1rem; */
     }
 }
